@@ -3,12 +3,12 @@ import React, { Component } from 'react'
 export class Letter extends Component {
     render() {
 
-        let letter = 'a'
+        let letter = this.props.letter
 
         return (
-            <div>
-                <span> {letter} </span>
-            </div>
+            this.props.letterStatus
+                ? <span style={{color : 'red'}} >{letter}</span>
+                : <span> {letter} </span>
         )
     }
 }
