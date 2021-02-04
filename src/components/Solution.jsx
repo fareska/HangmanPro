@@ -5,7 +5,6 @@ export class Solution extends Component {
 
 
     render() {
-        let letterStatus = this.props.letterStatus
         let hint = this.props.solution.hint
         let word = this.props.solution.word.split("")
 
@@ -13,7 +12,6 @@ export class Solution extends Component {
             <div>
                 {word.map((w, i) => {
                     return (
-                        // <Letter key={i} letter={w} />
                         <Letter key={i} letter={this.props.letterStatus[w] ? w : ' _ '} />
                     )
                 })}
